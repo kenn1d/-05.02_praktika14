@@ -1,4 +1,5 @@
-﻿using System;
+﻿using praktika14.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,26 @@ namespace praktika14.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public List<Item> items = new List<Item>();
+
         public Main()
         {
             InitializeComponent();
+            // Добавляем элемент в коллекцию
+            items.Add(new Item("Шкаф", 20000, "Images/71euhy8b67gmcyp20f9qj8q7ytmvz8i1.jpg"));
+            // вызываем метод генерации интерфейса
+            LoadItems();
+        }
+
+        /// <summary>Загрузка вещей</summary>
+        public void LoadItems()
+        {
+            parent.Children.Clear(); // очищаем parent
+
+            foreach (Item item in items)
+            {
+                parent.Children.Add(new Elements.Item(item));
+            }
         }
     }
 }

@@ -109,7 +109,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\71euhy8b67gmcyp20f9qj8q7ytmvz8i1.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\background.jpg" />
     <Resource Include="Images\instagram.png" />
