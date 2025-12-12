@@ -28,12 +28,12 @@ namespace praktika14.Elements
             if(item != null)
             {
                 // если файл существует
-                if (File.Exists(Directory.GetCurrentDirectory() + "Images/Items/" + item.src))
+                if (File.Exists(Directory.GetCurrentDirectory() + "/Image/" + item.src))
                     // указывем файл
-                    image.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "Images/Items/" + item.src));
+                    image.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "/Image/" + item.src));
                 else
                     //если файла нет, указываем изображение
-                    image.Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "/Images/Items/placeholder.png"));
+                    image.Source = new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "/Image/placeholder.jpg"));
 
                 // указываем цену
                 price.Content = item.price;
