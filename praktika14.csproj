@@ -71,8 +71,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Basket.cs" />
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\Repo.cs" />
     <Compile Include="Elements\Category.xaml.cs">
       <DependentUpon>Category.xaml</DependentUpon>
     </Compile>

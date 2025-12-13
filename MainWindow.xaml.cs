@@ -14,6 +14,7 @@ namespace praktika14
             InitializeComponent();
 
             OpenPage(pages.Categories);
+            Classes.Basket.totalPrice = 0;
         }
 
         public enum pages

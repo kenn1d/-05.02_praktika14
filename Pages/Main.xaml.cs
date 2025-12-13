@@ -11,11 +11,12 @@ namespace praktika14.Pages
     /// </summary>
     public partial class Main : Page
     {
+        List<Classes.Item> AllItems;
         public Main(List<Classes.Item> items)
         {
             InitializeComponent();
-            
             LoadItems(items);
+            BasketUpdate();
         }
 
         /// <summary>Загрузка вещей</summary>
@@ -33,6 +34,12 @@ namespace praktika14.Pages
         {
             MainWindow mainwindow = (MainWindow)System.Windows.Application.Current.MainWindow;
             mainwindow.OpenPage(MainWindow.pages.Categories);
+        }
+
+        public void BasketUpdate()
+        {
+            int totalPrice = Basket.totalPrice;
+            basketPrice.Content = $"Корзина ({totalPrice})";
         }
     }
 }
